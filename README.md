@@ -1,8 +1,6 @@
 # Crafties
 
-TODO: Delete this and the text below, and describe your gem
-
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/crafties`. To experiment with that code, run `bin/console` for an interactive prompt.
+A Ruby gem to get Guitar Craft aphorisms.
 
 ## Installation
 
@@ -11,18 +9,24 @@ TODO: Replace `UPDATE_WITH_YOUR_GEM_NAME_IMMEDIATELY_AFTER_RELEASE_TO_RUBYGEMS_O
 Install the gem and add to the application's Gemfile by executing:
 
 ```bash
-bundle add UPDATE_WITH_YOUR_GEM_NAME_IMMEDIATELY_AFTER_RELEASE_TO_RUBYGEMS_ORG
+bundle add crafties
 ```
 
 If bundler is not being used to manage dependencies, install the gem by executing:
 
 ```bash
-gem install UPDATE_WITH_YOUR_GEM_NAME_IMMEDIATELY_AFTER_RELEASE_TO_RUBYGEMS_ORG
+gem install crafties
 ```
 
 ## Usage
 
-TODO: Write usage instructions here
+To get a random Guitar Craft aphorism, simply run:
+
+```bash
+crafty
+```
+
+This will display an aphorism.
 
 ## Development
 
