@@ -1,11 +1,14 @@
 # frozen_string_literal: true
 
 require_relative "crafty/version"
+require "yaml"
 
 module Crafty
-  class Error < StandardError; end
+  APHORISMS = YAML.load_file("aphorisms.yml")
 
   def self.aphorism
-    "Hi"
+    APHORISMS.sample
+  rescue Errno::ENOENT
+    "No aphorisms found. Run `bin/fetch` first."
   end
 end
