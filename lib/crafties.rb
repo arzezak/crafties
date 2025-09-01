@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
-require_relative "crafty/version"
+require_relative "crafties/version"
 require "yaml"
 
-module Crafty
+module Crafties
   APHORISMS = YAML.load_file("aphorisms.yml")
 
   def self.aphorism

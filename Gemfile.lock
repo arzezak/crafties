@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    crafty (0.1.0)
+    crafties (0.1.0)
       selenium-webdriver
 
 GEM
@@ -97,7 +97,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  crafty!
+  crafties!
   irb
   minitest (~> 5.16)
   rake (~> 13.0)

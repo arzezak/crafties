@@ -2,12 +2,12 @@
 
 require "test_helper"
 
-class TestCrafty < Minitest::Test
+class TestCrafties < Minitest::Test
   def test_that_it_has_a_version_number
-    refute_nil ::Crafty::VERSION
+    refute_nil ::Crafties::VERSION
   end
 
   def test_that_it_returns_an_aphorism
-    assert_kind_of String, Crafty.aphorism
+    assert_kind_of String, Crafties.aphorism
   end
 end

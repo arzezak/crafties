@@ -7,11 +7,11 @@ class TestExecutable < Minitest::Test
     @output = `#{File.expand_path("../exe/crafty", __dir__)}`
   end
 
-  def test_crafty_executable_outputs_a_string
+  def test_crafties_executable_outputs_a_string
     assert_kind_of String, @output
   end
 
-  def test_crafty_executable_output_is_not_empty
+  def test_crafties_executable_output_is_not_empty
     refute_empty @output.strip
   end
 end
