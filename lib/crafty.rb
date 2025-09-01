@@ -4,5 +4,8 @@ require_relative "crafty/version"
 
 module Crafty
   class Error < StandardError; end
-  # Your code goes here...
+
+  def self.aphorism
+    "Hi"
+  end
 end

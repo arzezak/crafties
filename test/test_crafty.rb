@@ -7,7 +7,7 @@ class TestCrafty < Minitest::Test
     refute_nil ::Crafty::VERSION
   end
 
-  def test_it_does_something_useful
-    assert false
+  def test_that_it_returns_an_aphorism
+    assert_kind_of String, Crafty.aphorism
   end
 end
