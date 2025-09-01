@@ -1,0 +1,30 @@
+#!/usr/bin/env ruby
+
+require "selenium-webdriver"
+
+options = Selenium::WebDriver::Chrome::Options.new
+options.add_argument("--headless")
+
+driver = Selenium::WebDriver.for :chrome, options: options
+driver.get("https://www.dgmlive.com/in-depth/guitar-craft-aphorisms")
+
+wait = Selenium::WebDriver::Wait.new(timeout: 3)
+wait.until { driver.find_elements(css: ".article-content p").any? }
+
+paragraphs = driver.find_elements(css: ".article-content p")
+
+paragraphs.each do |p|
+  text = p.text.strip
+
+  next if text.empty?
+
+  style = p.attribute("style")
+
+  if style&.include?("text-align: center") && !text.downcase.include?("honour")
+    next
+  end
+
+  puts text
+end
+
+driver.quit

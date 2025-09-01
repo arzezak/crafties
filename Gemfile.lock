@@ -2,11 +2,13 @@ PATH
   remote: .
   specs:
     crafty (0.1.0)
+      selenium-webdriver
 
 GEM
   remote: https://rubygems.org/
   specs:
     ast (2.4.3)
+    base64 (0.3.0)
     date (3.4.1)
     erb (5.0.2)
     io-console (0.8.1)
@@ -41,6 +43,7 @@ GEM
     regexp_parser (2.11.2)
     reline (0.6.2)
       io-console (~> 0.5)
+    rexml (3.4.2)
     rubocop (1.75.8)
       json (~> 2.3)
       language_server-protocol (~> 3.17.0.2)
@@ -64,6 +67,13 @@ GEM
       prism (>= 1.2, < 2.0)
       rbs (>= 3, < 5)
     ruby-progressbar (1.13.0)
+    rubyzip (3.0.2)
+    selenium-webdriver (4.35.0)
+      base64 (~> 0.2)
+      logger (~> 1.4)
+      rexml (~> 3.2, >= 3.2.5)
+      rubyzip (>= 1.2.2, < 4.0)
+      websocket (~> 1.0)
     standard (1.50.0)
       language_server-protocol (~> 3.17.0.2)
       lint_roller (~> 1.0)
@@ -80,6 +90,7 @@ GEM
     unicode-display_width (3.1.5)
       unicode-emoji (~> 4.0, >= 4.0.4)
     unicode-emoji (4.0.4)
+    websocket (1.2.11)
 
 PLATFORMS
   arm64-darwin-25
