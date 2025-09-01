@@ -4,7 +4,7 @@ require_relative "crafties/version"
 require "yaml"
 
 module Crafties
-  APHORISMS = YAML.load_file("aphorisms.yml")
+  APHORISMS = YAML.load_file(File.join(__dir__, "..", "aphorisms.yml"))
 
   def self.aphorism
     APHORISMS.sample
