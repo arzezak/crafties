@@ -1,6 +1,7 @@
 #!/usr/bin/env ruby
 
 require "selenium-webdriver"
+require "yaml"
 
 options = Selenium::WebDriver::Chrome::Options.new
 options.add_argument("--headless")
@@ -8,10 +9,12 @@ options.add_argument("--headless")
 driver = Selenium::WebDriver.for :chrome, options: options
 driver.get("https://www.dgmlive.com/in-depth/guitar-craft-aphorisms")
 
-wait = Selenium::WebDriver::Wait.new(timeout: 3)
+wait = Selenium::WebDriver::Wait.new(timeout: 10)
 wait.until { driver.find_elements(css: ".article-content p").any? }
 
 paragraphs = driver.find_elements(css: ".article-content p")
+
+aphorisms = []
 
 paragraphs.each do |p|
   text = p.text.strip
@@ -24,7 +27,11 @@ paragraphs.each do |p|
     next
   end
 
-  puts text
+  aphorisms << text
+end
+
+File.open("aphorisms.yml", "w") do |file|
+  file.write(aphorisms.to_yaml)
 end
 
 driver.quit
