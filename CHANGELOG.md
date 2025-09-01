@@ -1,5 +1,7 @@
 ## [Unreleased]
 
+- Fix aphorisms
+
 ## [0.2.0] - 2025-09-01
 
 - Fix file reference
