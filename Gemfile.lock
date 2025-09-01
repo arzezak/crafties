@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    crafties (0.1.0)
+    crafties (0.2.0)
       selenium-webdriver
 
 GEM
